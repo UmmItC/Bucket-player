@@ -1,15 +1,24 @@
 import { useState } from 'react'
-import { Button } from "@material-tailwind/react";
-import { Typography } from "@material-tailwind/react";
+import Plyr from "plyr-react";
+import "plyr-react/plyr.css";
 
+const videoSrc = {
+  type: "video",
+  sources: [
+    {
+      src: "ZRtdQ81jPUQ",
+      provider: "youtube"
+    }
+  ]
+};
 
 function App() {
 
   return (
     <>
-      <Button>OK</Button>
+     <Plyr source={videoSrc} />
     </>
   )
 }
 
-export default App
+export default App;
